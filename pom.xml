@@ -11,7 +11,6 @@
 		<finalName>za105G3</finalName>
 	</build>
 	<dependencies>
-
 		<dependency>
 			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-api</artifactId>
