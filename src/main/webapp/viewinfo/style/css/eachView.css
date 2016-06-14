@@ -1,0 +1,87 @@
+/*div {
+	 border: 3px solid red; 
+}
+/*
+#loginDiv{
+    font-weight:bold;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-family:Comic Sans MS;
+     margin-right: 40px; 
+    margin-top: 10px;
+}
+#signUpDiv{
+    font-weight:bold;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-family:Comic Sans MS;
+     margin-right: 40px; 
+    margin-top: 10px;
+}
+*/
+
+
+p{font-size:20px;}
+h1{
+	
+	font-size:48px;
+	text-align:center;
+}
+h4{
+	font-size:25px;
+	color:blue;
+	
+}
+
+li a{
+	font-weight:bold;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-family:Comic Sans MS,微軟正黑體;
+    /* margin-right: 40px; */
+    margin-top: 10px;
+}
+
+#header{
+  background-color:#6999D1;
+  color:#6999D1;
+}
+
+#searchBar{
+	margin-top:100px;
+	margin-left:auto;
+	margin-right:auto;	
+}
+
+#logImg{
+    margin-bottom: 5px;
+}
+#viewPic{
+	width:950px;
+	height:600px;
+}
+
+#content{
+	/*border:2px solid red;*/
+	font-family:Comic Sans MS, 微軟正黑體;
+}
+
+#searchList{
+  float:center;
+}
+
+#tabs{
+  font-family:Comic Sans MS, 微軟正黑體; 
+}
+
+#footer{
+    background-color:#666666;
+   
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+	/* text-align:center; */ 
+}
+#searchList{
+	margin-top:10px;	
+}
