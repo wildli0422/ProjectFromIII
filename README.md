@@ -1,7 +1,7 @@
 # ProjectFromIII
 
 執行h2-1.3.176.jar 
-再H2 console 中建立
+在H2 console 中建立
 
 jdbc:h2:tcp://localhost/mem:testdb 
 username:sa
