@@ -8,7 +8,7 @@
 	<name>projectFromIII Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<build>
-		<finalName>za105G3</finalName>
+		<finalName>projectFromIII</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
