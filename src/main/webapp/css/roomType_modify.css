@@ -1,0 +1,51 @@
+
+div {
+/* 	border: 1px dashed red; */
+	font-family:Hiragino Sans GB,������,STHeiti,敺株蔓����,Microsoft YaHei,SimHei,
+	Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+
+/* p { */
+/* 	border: 1px dashed blue; */
+/* } */
+/* tr { */
+/* 	border: 1px dashed green; */
+/* } */
+
+/* topBar */
+#topBar {
+	background-color:#6999D1;
+	height:100px;
+	
+}
+
+li a {
+	font-size:15px;
+    display: block;
+    color: white;
+    text-align:center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+/* topBar */
+
+
+
+
+
+
+/* footer */
+#footer01 {
+	text-align: center;
+	background-color: #2C3539;
+	color: #D0D3D4;
+}
+
+#footer02 {
+	font-size: 13px;
+	background-color: #2C3539;
+	color: #FFFFFF;
+}
+
+
