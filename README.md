@@ -1,10 +1,12 @@
 # ProjectFromIII
 
 執行h2-1.3.176.jar 
-在H2 console 中建立
+在H2 console 中輸入
 
-jdbc:h2:tcp://localhost/mem:testdb 
+JDBC URL: jdbc:h2:tcp://localhost/mem:testdb 
+
 username:sa
+
 password:sa 
 
 再於server context.xml中新增
