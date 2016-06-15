@@ -1,6 +1,6 @@
 # ProjectFromIII
 
-執行h2-1.3.176.jar 
+將h2-1.3.176.jar放入server/lib並執行 
 在H2 console 中輸入
 
 JDBC URL: jdbc:h2:tcp://localhost/mem:testdb 
