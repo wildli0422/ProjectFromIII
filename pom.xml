@@ -82,6 +82,12 @@
 			<artifactId>jsf-impl</artifactId>
 			<version>2.1.0-b03</version>
 		</dependency>
+		<!-- http://mvnrepository.com/artifact/jexcelapi/jxl -->
+		<dependency>
+			<groupId>jexcelapi</groupId>
+			<artifactId>jxl</artifactId>
+			<version>2.4.2</version>
+		</dependency>
 
 
 	</dependencies>
