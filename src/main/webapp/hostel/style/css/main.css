@@ -1,0 +1,66 @@
+div {
+/* 	 border: 3px solid red;  */
+	 font-family:Hiragino Sans GB,华文细黑,STHeiti,微软雅黑,Microsoft YaHei,SimHei,
+	Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+/*
+#loginDiv{
+    font-weight:bold;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-family:Comic Sans MS;
+     margin-right: 40px; 
+    margin-top: 10px;
+}
+#signUpDiv{
+    font-weight:bold;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-family:Comic Sans MS;
+     margin-right: 40px; 
+    margin-top: 10px;
+}
+*/
+
+h1{
+	
+	font-size:48px;
+	text-align:center;
+}
+#searchBar{
+	margin-top:100px;
+	margin-left:auto;
+	margin-right:auto;	
+}
+li a{
+	font-size:15px;
+    display: block;
+    color: white;
+    text-align:center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#logImg{
+    margin-bottom: 5px;
+}
+#viewPic{
+	width:950px;
+	height:600px;
+}
+
+#content{
+	/*border:2px solid red;*/
+	font-family:Comic Sans MS, 微軟正黑體;
+}
+
+#footer{
+    background-color:#666666;
+   
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+	/* text-align:center; */ 
+}
+#searchList{
+	margin-top:10px;	
+}

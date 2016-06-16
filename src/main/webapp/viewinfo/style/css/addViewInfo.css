@@ -1,0 +1,89 @@
+/* div {
+	border: 1px dashed red;
+	font-family:Comic Sans MS,微軟正黑體;
+} */
+
+/*
+#loginDiv{
+    font-weight:bold;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-family:Comic Sans MS;
+     margin-right: 40px; 
+    margin-top: 10px;
+}
+
+#signUpDiv{
+    font-weight:bold;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-family:Comic Sans MS;
+     margin-right: 40px; 
+    margin-top: 10px;
+}
+*/
+#loginDiv {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 110px;
+    margin-top: 10px;
+}
+
+/* #searchBar{
+	margin-top:100px;
+	margin-left:auto;
+	margin-right:auto;	
+} */
+ul li{
+	border-right:2px solid #ccc;
+}
+a:hover{
+	font-size:25px;
+}
+ol li{
+	font-weight:bold;
+    font-size: 20px;
+	font-family:Comic Sans MS,微軟正黑體;
+}
+li a{
+	font-weight:bold;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-family:Comic Sans MS,微軟正黑體;
+    /* margin-right: 40px; */
+    margin-top: 10px;
+}
+th{
+	color:white;
+	font-size:25px;
+}
+td {
+	font-size:20px;
+}
+#btAccept{
+	width:50px;
+	height:50px;
+	margin:20px;
+}
+#btRefuse{
+	width:50px;
+	height:50px;
+}
+pre{
+	font-size:20px;
+	font-family:Comic Sans MS,微軟正黑體;
+}
+#logImg{
+    margin-bottom: 5px;
+}
+#footer{
+    background-color:#666666;
+	color:white;
+    height: 150px;
+    width: 100%;
+	text-align:center;
+	
+}
+#searchList{
+	margin-top:50px;	
+}
