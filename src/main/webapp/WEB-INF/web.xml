@@ -24,14 +24,28 @@
 		<param-name>ExcelFile</param-name>
 		<param-value>/WEB-INF/data/tableData.xls</param-value>
 	</context-param>
-
-
 	<resource-ref>
 		<description>DB Connection</description>
 		<res-ref-name>jdbc/ZA105G3</res-ref-name>
 		<res-type>javax.sql.DataSource</res-type>
 		<res-auth>Container</res-auth>
 	</resource-ref>
+
+
+
+	<filter>
+		<filter-name>characterEncodingFilter</filter-name>
+		<filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>characterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 	<servlet>
 		<servlet-name>DBinit</servlet-name>
 		<servlet-class>CreateTables</servlet-class>
@@ -50,8 +64,8 @@
 		<servlet-name>Faces Servlet</servlet-name>
 		<url-pattern>*.xhtml</url-pattern>
 	</servlet-mapping>
-	
-		<filter>
+
+	<filter>
 		<filter-name>DbCheckFilter</filter-name>
 		<filter-class>filters.DbCheckFilter</filter-class>
 	</filter>
@@ -64,7 +78,7 @@
 		<dispatcher>INCLUDE</dispatcher>
 		<dispatcher>ASYNC</dispatcher>
 	</filter-mapping>
-	
+
 	<servlet>
 		<servlet-name>LoginServlet</servlet-name>
 		<servlet-class>com.page.controller.LoginServlet</servlet-class>

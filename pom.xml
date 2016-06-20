@@ -88,8 +88,7 @@
 			<artifactId>jxl</artifactId>
 			<version>2.4.2</version>
 		</dependency>
- 
- 
+
 
 	</dependencies>
 </project>
