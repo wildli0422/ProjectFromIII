@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<!--   		css file import -->
+	<h:outputStylesheet name="css/reset.css"></h:outputStylesheet>
+	<h:outputStylesheet name="css/bootstrap.min.css"></h:outputStylesheet>
+	<h:outputStylesheet name="css/bootstrap-theme.min.css"></h:outputStylesheet>
+	<!-- 		js file import -->
+	<h:outputScript name="js/bootstrap.min.js"></h:outputScript>
+	<!-- ****bootstrap icon**** -->
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+	<title>IDVHostelNo #{IDVHostelController.IDVHostelNo}</title>
+</h:head>
+
+<h:body>
+
+	<f:metadata>
+		<f:viewParam name="hostelNo"
+			value="#{IDVHostelController.IDVHostelNo}" />
+	</f:metadata>
+	<p:contentFlow value="#{IDVHostelController.hostelPicNos}"
+		var="hostelPicNo">
+		<div>1112</div>
+		
+	</p:contentFlow>
+
+
+</h:body>
+
+</html>

@@ -1,16 +1,144 @@
-<html
-	xmlns="http://www.w3.org/1999/xhtml"  
-    xmlns:h="http://java.sun.com/jsf/html"  
-    xmlns:f="http://java.sun.com/jsf/core"  
-    xmlns:p="http://primefaces.org/ui">
-      <h:head>  
-  
-    </h:head>  
-      
-    <h:body>  
-      
-       ssssssss
-          
-    </h:body>  
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+<h:head>
+	<!--   		css file import -->
+	<h:outputStylesheet name="css/reset.css"></h:outputStylesheet>
+	<h:outputStylesheet name="css/bootstrap.min.css"></h:outputStylesheet>
+	<h:outputStylesheet name="css/bootstrap-theme.min.css"></h:outputStylesheet>
+	<h:outputStylesheet name="css/HomePage.css"></h:outputStylesheet>
+	<!-- 		js file import -->
+	<h:outputScript name="js/bootstrap.min.js"></h:outputScript>
+	<!-- ****bootstrap icon**** -->
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+	<title>JSF-eChioce| 台灣民宿 | choose your life.</title>
+</h:head>
+
+<h:body>
+
+
+	<div class="col-md-12">
+		<div class="row">
+			<div
+				style="background-image: url('images/Travel_HomePage01.jpg'); height: 919px; background-position: center; background-size: cover;">
+				<c:if test="#{empty tenantVO and empty dealerVObyAccount}">
+					<a href="#{request.contextPath}/login.jsp" class="login">登入</a>
+					<a class="registered" data-toggle="modal" data-target="#myModal">註冊</a>
+					<a href="#{request.contextPath}/user/regisDealer.jsp"
+						style="border: 2px solid white;" class="registered">成為房東</a>
+				</c:if>
+				<c:if test="#{not empty tenantVO or not empty dealerVObyAccount}">
+					<a href="#{request.contextPath}/loginServlet.do?action=logout"
+						class="login">登出</a>
+				</c:if>
+
+				<!-- 			dealer -->
+				<c:if test="#{not empty tenantVO}">
+					<a href="#{request.contextPath}/tenant/tenant_One.jsp"
+						class="login">Hi #{tenantVO.tenantName}</a>
+				</c:if>
+				<c:if test="#{not empty dealerVObyAccount}">
+					<a href="#{request.contextPath}/dealer/dealer_One.jsp"
+						class="login">Hi #{dealerVObyAccount.dealerName}</a>
+					<a href="#{request.contextPath}/hostel/hostelCalendar.jsp"
+						class="login"> 民宿管理</a>
+				</c:if>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12" id="searchbox">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10" id="searchbox_in">
+
+				<div style="margin-top: 26px; vertical-align: middle;">
+					<h:form>
+						<p:autoComplete placeholder="找民宿嗎?"
+							value="#{indexHostelController.queryHostel}"
+							completeMethod="#{indexHostelController.suggestHostel}">
+						</p:autoComplete>
+						<p:commandButton action="hostel/searchResult" value="submit"></p:commandButton>
+					</h:form>
+				</div>
+
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+	</div>
+	<div class="col-md-12" style="text-align: center; margin-top: 20px;">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4" id="slogn">
+				<p style="font-weight: bold;">台灣好好玩</p>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+	</div>
+
+
+	<div class="col-md-12">
+		<div class="row">
+			<div class="col-md-12">
+				<h:form id="form1">
+					<p:carousel value="#{indexHostelController.allRandomHostels}"
+						var="hostelDTO" headerText="推薦民宿" itemStyle="text-align:center"
+						responsive="true" vertical="true" numVisible="2">
+
+						<p:link outcome="hostel/IDVHostel">
+							<f:param name="hostelNo" value="#{hostelDTO.hostelNo}"></f:param>
+							<p:graphicImage value="#{indexHostelController.image}"
+								width="350px" height="250px" id="imgHostel" style="padding:3px">
+								<f:param name="hostelNo" value="#{hostelDTO.hostelNo}"></f:param>
+							</p:graphicImage>
+							<p:overlayPanel id="imgPanel" for="imgHostel" showEffect="fade"
+								hideEffect="fade" showEvent="mouseover" hideEvent="mousedown"
+								dismissable="true" at="left top"
+								style="background-color:rgba(0,0,0,0.6); width:350px ;height:250px ;">
+								<div style="color: white;">
+									<p
+										style="text-align: center; margin-top: 10px; font-weight: bold;">#{hostelDTO.hostelName}</p>
+									#{hostelDTO.hostelAddress} <br /> #{hostelDTO.hostelContent}
+								</div>
+							</p:overlayPanel>
+						</p:link>
+					</p:carousel>
+				</h:form>
+				<h:form id="form2">
+					<p:carousel value="#{indexHostelController.nonRandomHostels}"
+						var="hostelDTO" headerText="超值優惠" itemStyle="text-align:center"
+						responsive="true" vertical="true">
+
+						<p:link
+							href="/hostel/IDVhostelDisplay.jsp?hostelNo=#{hostelDTO.hostelNo}">
+							<f:param name="hostelNo" value="#{hostelDTO.hostelNo}"></f:param>
+							<p:graphicImage value="#{indexHostelController.image}"
+								width="300px" alt="#{hostelDTO.hostelNo}" id="imgHostel">
+								<f:param name="hostelNo" value="#{hostelDTO.hostelNo}"></f:param>
+							</p:graphicImage>
+							<p:overlayPanel id="imgPanel" for="imgHostel" showEffect="fade"
+								hideEffect="fade" showEvent="mouseover" hideEvent="mousedown"
+								dismissable="true" at="left top"
+								style="background-color:rgba(0,0,0,0.6); width:300px ;height:200px ;">
+								<div style="color: white;">
+									<p
+										style="text-align: center; margin-top: 10px; font-weight: bold;">#{hostelDTO.hostelName}</p>
+									#{hostelDTO.hostelAddress} <br /> #{hostelDTO.hostelContent}
+								</div>
+							</p:overlayPanel>
+						</p:link>
+					</p:carousel>
+
+				</h:form>
+			</div>
+		</div>
+	</div>
+
+
+</h:body>
 
 </html>

@@ -121,6 +121,7 @@
 			height:919px;
             background-position:center;
             background-size:cover;">
+            <a href="<%=request.getContextPath()%>/jsf/index.xhtml" style="border: 2px solid red;" class="registered">前往JSF頁面</a>
 			<c:if test="${empty tenantVO and empty dealerVObyAccount}">
 				<a href="<%=request.getContextPath()%>/login.jsp" class="login">登入</a>
 				<a class="registered" data-toggle="modal" data-target="#myModal">註冊</a>

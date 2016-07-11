@@ -36,7 +36,7 @@ public class GetHostelPicture extends HttpServlet {
 		response.setContentType(contentType);
 		ServletOutputStream out = response.getOutputStream();
 		String sql = "select hostelpicture from hostel where hostelno =?";
-		Integer pkNo=new Integer(request.getParameter("pkNo"));
+		Integer pkNo=new Integer(request.getParameter("pkNo").trim());
 		try {
 			Connection con = ds.getConnection();
 			PreparedStatement pstat=con.prepareStatement(sql);
